@@ -66,8 +66,8 @@
     </head>
     <body>
         <ul>
-            @foreach($content as $con)
-                <li>{{$con}}</li>
+            @foreach($tasks as $task)
+                <li>{{$task->body}}</li>
             @endforeach
         </ul>
     </body>

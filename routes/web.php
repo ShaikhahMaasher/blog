@@ -16,12 +16,8 @@ Route::get('/', function() {
 });
 
 Route::get('about', function() {
-    $content = [
-        'This is cool stuff!',
-        'I love Laravel',
-        'Loving This!'
-    ];
-    return view('about', compact('content'));
+    $tasks = DB::table('tasks')->get();
+    return view('about', compact('tasks'));
 });
 
 

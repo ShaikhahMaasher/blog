@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    public function inComplete() {
-       return this::where('isCompleted', 0)->get();
+    public function scopeInComplete($query) // Using query scope
+    {
+       return $query->where('isCompleted', 0);
     }
 }
